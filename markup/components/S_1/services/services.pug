@@ -1,0 +1,42 @@
+mixin services(props = {})
+    | <!-- ********** c-services-S-1 ********** -->
+    
+    .c-services-S-1&attributes(attributes)
+        .__cl-c-services___
+            section.__cl-c-services__wrapp___
+                -
+                    const data = [{
+                        title: 'High Quality',
+                        icon: 'troffy',
+                        iconWidth: '36',
+                        iconHeight: '40',
+                        text: 'crafted from top materials'
+                    }, {
+                        title: 'Warrany Protection',
+                        icon: 'garante',
+                        iconWidth: '40',
+                        iconHeight: '40',
+                        text: 'Over 2 years'
+                    }, {
+                        title: 'Free Shipping',
+                        icon: 'shipping',
+                        iconWidth: '40',
+                        iconHeight: '38',
+                        text: 'Order over 150$'
+                    }, {
+                        title: '24 / 7 Support',
+                        icon: 'support',
+                        iconWidth: '36',
+                        iconHeight: '40',
+                        text: 'Dedicated support'
+                    }]
+
+                each val in data
+                    a(href="#" aria-label="").__cl-c-services__item___
+                        .__cl-c-services__icon___
+                            img(src=`static/img/general/sprite.svg#i-${val.icon}` alt="icon" width=`${val.iconWidth}` height=`${val.iconHeight}`)
+                        .__cl-c-services__content___      
+                            .__cl-c-services__title___= val.title
+                            p.__cl-c-services__text___= val.text
+
+    | <!-- ********** c-services-S-1 ********** -->

@@ -1,0 +1,106 @@
+/*!------------------------------------------------------------------------------
+
+        c-services-S-1
+
+------------------------------------------------------------------------------*/
+
+.c-services-S-1 {
+    .__cl-c-services {
+        &__wrapp___ {
+            display: block;
+        }
+
+        &__item___ {
+            display: flex;
+            width: 100%;
+            padding: 20px 0 0 0;
+
+            &:first-child {
+                padding: 0;
+            }
+
+            &:last-child {
+                padding: 20px 0 0 0;
+            }
+        }
+
+        &__icon___ {
+            display: block;
+            padding: 0 24px 0 0;
+            fill: $services-icon;
+        }
+
+        &__title___ {
+            font-family: $font-alt;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: $services-title;
+        }
+
+        &__text___ {
+            margin-top: 2px;
+            font-family: $font-alt;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: $services-text;
+        }
+
+        @include respond-from(xs) {
+            &__bg___ {
+                img {
+                    object-position: 0 50%;
+                }
+            }
+        }
+
+        @include respond-from(sm) {
+            &__wrapp___ {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: baseline;
+            }
+
+            &__item___ {
+                padding: 20px 0 0 0;
+
+                &:first-child {
+                    padding: 0;
+                }
+
+                &:last-child {
+                    padding: 20px 0 0 0;
+                }
+            }
+        }
+
+        @include respond-from(md) {
+            &__wrapp___ {
+                display: flex;
+                flex-direction: initial;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__item___ {
+                padding: 0 20px 0 0;
+
+                &:first-child {
+                    padding: 0 20px 0 0;
+                }
+
+                &:last-child {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+/*!------------------------------------------------------------------------------
+
+        c-services-S-1
+
+------------------------------------------------------------------------------*/

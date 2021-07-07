@@ -1,0 +1,263 @@
+$theme-name: 'theme_violet';
+
+$main-fill: #3A3A3A;
+$main-body: #fff; 
+$main-text: #302858;
+$link-fill: #616161;
+$link-fill-title: #3A3A3A;
+$link-more: #302858;
+$link-more-hov: #6a52c5;
+$title-text: #302858;
+$title-decor-line: #b0a3e1;
+$title-decor-figure: #6852c5;
+$tc-text: #302858;
+$tc-text-invert: #fff;
+$label-recommend-fill: #6a52c5;
+$label-top-fill: #e13274;
+$label-text: #fff;
+
+$sidebar-fill: #e7eaf5;
+
+// btns
+$btn-primary-fill: #E89F71;
+$btn-primary-fill-hov: #E89F71;
+$btn-primary-text: #fff;
+$btn-primary-text-hov: #fff;
+$btn-primary-bd: transparent;
+$btn-primary-bd-hov: transparent;
+$btn-primary-shadow: 5px 8px 27px 0px rgba(#000, .16);
+$btn-primary-shadow-hov: 5px 8px 27px 0px rgba(#000, .16);
+
+$btn-alt-fill: #6a52c5;
+$btn-alt-fill-hov: #8d72f2;
+$btn-alt-text: #fff;
+$btn-alt-text-hov: #fff;
+$btn-alt-bd: transparent;
+$btn-alt-bd-hov: transparent;
+$btn-alt-shadow: 5px 8px 27px 0px rgba(#000, .16);
+$btn-alt-shadow-hov: 2px 3px 10px 0px rgba(#000, .16);
+
+$btn-play-fill: rgba(#6a52c5, .41);
+$btn-play-fill-hov: rgba(#614fc3, .4);
+$btn-play-text: #fff;
+$btn-play-text-hov: #fff;
+$btn-play-bd: transparent;
+$btn-play-bd-hov: #fff;
+$btn-play-shadow: none;
+$btn-play-shadow-hov: none;
+$btn-more-text: #6b53c6;
+
+// input
+$input-fill: #F4F5F7;
+$input-fill-hov: #e7eaf5;
+$input-text: #828282;
+$input-text-hov: #302858;
+$input-shadow: none;
+$input-shadow-hov: none;
+$input-bd: transparent;
+$input-bd-hov: #806dcd;
+$input-error: #e33d5c;
+
+// hdr
+$hdr-fill: #fff;
+$hdr-shadow: 0 5px 14px 0px rgba(33, 25, 120, .18);
+$hdr-bd: #d7d5e9;
+$hdr-modal-fill: #ececec;
+$hdr-btn-fill: #616161;
+$hdr-item-hov-mob: #adacb3;
+$hdr-link-mob: #302858;
+$hdr-link-mob-hov: #fff;
+$hdr-sub-link-mob: #302858;
+$hdr-sub-link-mob-hov: #fff;
+$hdr-link: #302858;
+$hdr-link-hov: #6a52c5;
+$hdr-sub-drop-fill: #ececec;
+$hdr-sub-link-fill-hov: #adacb3;
+$hdr-sub-link-text-hov: #fff;
+$hdr-search-fill: #e7ecf5;
+$hdr-search-text: #302858;
+$hdr-search-icon: #53488a;
+$hdr-search-icon-hov: #977dff;
+$hdr-fix-scroll-bg: #ececec;
+
+// ftr
+$ftr-fill: #fff;
+$ftr-text: #616161;
+$ftr-copy: #9189b8;
+$ftr-border: #D8D8D8;
+$ftr-title-fill: #000;
+$ftr-icon: #898989;
+
+
+// social
+$soc-fill: transparent;
+$soc-bd: #614fc3;
+$soc-icon: #262F56;
+$soc-fill-hov: #614fc3;
+$soc-bd-hov: #614fc3;
+$soc-icon-hov: #fff;
+
+// banner
+$banner-fill: rgba(255, 255, 255, .72);
+$banner-text: #898989;
+
+// top games
+$top-games-fill: #e7eaf5;
+$top-games-text: #302858;
+
+// rating
+$rating-fill: #d2cde7;
+$rating-fill-hov: #ffba00;
+$rating-text: #302858;
+
+// casino
+$casino-fill: #fff;
+$casino-bd: #6b53c6;
+$casino-text: #302858;
+$casino-bonus: #302858;
+
+// banner-bonus
+$banner-bonus-title: #6752c5;
+$banner-bonus-text: #302858;
+
+// bonus
+$bonus-fill: #6855b3;
+$bonus-text: #d5caff;
+$bonus-title-text: #fff;
+
+// slot
+$slot-bg: #F4F5F7;
+$slot-text: #898989;
+$slot-label: #B0B0B0;
+$slot-label-elem: #B0B0B0;
+$slot-btn-bg: #fff;
+$slot-btn-fill: #E89F71;
+$slot-value: #fff;
+$slot-fill-hov: rgba(#3A3A3A, .72);
+$slot-title-hov: #fff;
+$slot-text-hov: #d5caff;
+
+
+// slider-box
+$slide-shadow: 0px 0px 12px 2px rgba(13, 13, 13, .15);
+$slide-name: #fff;
+$slide-btn-play-fill: #fb9a2d;
+$slide-btn-play-inner: #fff;
+$slide-btn-play-bd: rgba(251, 154, 45, .3);
+$slide-demo-link: #fff;
+$slide-demo-link-hov: #fff;
+$slide-row-fill: #fff;
+$slide-data: #898989;
+
+// faq
+$faq-btn-text: #302858;
+$faq-btn-text-hov: #6852c5;
+$faq-in-text: #302858;
+$faq-in-fill: transparent;
+$faq-in-bd: #6a52c5;
+
+// feedback
+$feedback-fill: transparent;
+$feedback-bd: #6b53c6;
+$feedback-title: #302858;
+$feedback-text: #302858;
+
+// categories
+$categories-icon-fill-1: #b3afd3;
+$categories-icon-fill-1-hov: #accd41;
+$categories-icon-fill-2: #8d85ba;
+$categories-icon-fill-2-hov: #899b1c;
+$categories-icon-fill-3: #fff;
+$categories-icon-fill-3-hov: #fff;
+$categories-icon-fill-4: #e7eaf5;
+$categories-icon-fill-4-hov: #e7eaf5;
+$categories-icon-fill-5: #2d2546;
+$categories-icon-fill-5-hov: #2d2546;
+
+// contents
+$contents-text: #302858;
+$contents-text-hov: #6852c5;
+
+// banner-alt
+$services-title: #3A3A3A;
+$services-text: #898989;
+$services-icon: #3A3A3A;
+
+
+// breadcrumbs
+$breadcrumbs-text: #d5caff;
+$breadcrumbs-text-hov: #d5caff;
+
+// comments
+$comments-author: #302858;
+$comments-bd: #6b53c6;
+
+// slider
+$slider-arrow-fill: #fff;
+$slider-arrow-fill-hov: rgba(#e7eaf5, .95);
+$slider-arrow: #E89F71;
+$slider-arrow-hov: #7863ca;
+$slick-dot-active: #E89F71;
+$slick-dot: #d0d1d9;
+
+// banner-casino
+$banner-casino-fill: #5947bd;
+$banner-casino-info-fill: #fff;
+$banner-casino-title-text: #fff;
+$banner-casino-bonus-text: #fff;
+$banner-casino-text: #d5caff;
+
+// gallery
+$gallery-bd: #dfdff4;
+$gallery-hov-fill: rgba(#6852c5, .8);
+$gallery-hov-icon: #fff;
+$gallery-overlay: #1f1943;
+
+// casino-info
+$casino-info-fill: #e7eaf5;
+$casino-info-text: #302858;
+$casino-info-line: #d0ccee;
+$casino-info-title-fill: #fff;
+$casino-info-title-text: #6852c5;
+$casino-info-title-icon: #6852c5;
+$casino-info-mark-text: #6852c5;
+$casino-info-mark-true: #98c700;
+$casino-info-mark-false: #8c90b8;
+
+// features
+$features-pros: #98c700;
+$features-cons: #8c90b8;
+$features-bd: #6b53c6;
+
+//form 
+$form-icon-fill: #fff;
+
+// game-info
+$game-info-fill: #6855b3;
+$game-info-text: #d5caff;
+$game-info-key-text: #fff;
+$game-info-bd: #806ec5;
+$game-info-icon: #c5f137;
+$game-info-link-hov: #fff;
+
+// game
+$game-fill: #5e4dc0;
+$game-text: #fff;
+
+// popup-cork
+$popup-cork-fade: rgba(#1f1943, .95);
+$popup-cork-fill: #373eca;
+$popup-cork-text: #fff;
+$popup-cork-close: #fff;
+
+//products
+$products-icon: #fff;
+
+// news
+$news-text: #302858;
+$news-text-hov: #302858;
+
+// quote
+$quote-text: #6a52c5;
+$quote-bd: #6a52c5;
+$quote-fill: transparent;

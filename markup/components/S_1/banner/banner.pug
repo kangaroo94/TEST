@@ -1,0 +1,18 @@
+mixin banner(props = {})
+    | <!-- ********** c-banner-S-1 ********** -->
+    
+    .c-banner-S-1&attributes(attributes)
+        .__cl-c-banner___
+            picture.__cl-c-banner__bg___
+                source(media="(min-width: 568px)" data-srcset="static/img/general/banner-bg.jpg")
+                source(media="(min-width: 0px )" data-srcset="static/img/general/banner-bg.jpg")
+                img(class="lazyload" src="static/img/general/cork.png" data-src="static/img/banner-bg.jpg" alt="")
+
+            .__cl-c-banner__box___.__cl-w-center___ 
+                .__cl-c-banner__content___.__cl-w-gap-xs___
+                    h1.__cl-c-h1___.__cl-c-banner__title___ High-Quality Furniture Just For You
+                    p.__cl-c-banner__text___ Our furniture is made from selected and best quality materials that are suitable for your dream home
+                    .__cl-c-banner__btn-box___
+                        a(href="#").__cl-c-btn___.__cl-c-banner__btn___.js-btn-listener Shop Now 
+        
+    | <!-- ********** c-banner-S-1 ********** -->

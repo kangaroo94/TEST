@@ -1,0 +1,132 @@
+/*!------------------------------------------------------------------------------
+
+        c-gallery-S-1
+
+------------------------------------------------------------------------------*/
+
+.c-gallery-S-1 {
+    .__cl-c-gallery {
+        &__container___ {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(194px, 1fr));
+            grid-auto-flow: dense;
+        }
+
+        &__img-box___ {
+            @extend %img-link;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__img-vertical___ {
+            grid-row: span 2;
+        }
+
+        &__img-horizontal___ {
+            grid-column: span 2;
+        }
+
+        &__img-big___ {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &__slider___ {
+            font-size: 0;
+
+            &:not(.slick-slider) {
+                display: flex;
+
+                & > * {
+                    flex: 1 1 25%;
+
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+
+            &.u-fix-height {
+                max-height: 200px;
+                overflow: hidden;
+            }
+
+            .slick-slide {
+                opacity: .8;
+                transition: all .2s;
+            }
+
+            .slick-active {
+                opacity: 1;
+            }
+        }
+
+        &__slide___ {
+            max-width: 270px;
+            padding: 0 3px;
+        }
+
+        @include respond-from(sm) {
+            &__slider___ {
+                margin: 0 -3px;
+
+                &.u-fix-height {
+                    max-height: 180px;
+                }
+
+                .slick-slide {
+                    opacity: 1;
+                }
+            }
+
+            &__slide___ {
+                max-width: none;
+            }
+        }
+
+        @include respond-from(md) {
+            &__slider___ {
+                &.u-fix-height {
+                    max-height: 164px;
+                }
+            }
+        }
+
+        @include respond-from(xmd) {
+            &__slider___ {
+                margin: 0 -10px;
+
+                &.u-fix-height {
+                    max-height: 178px;
+                }
+            }
+
+            &__slide___ {
+                padding: 0 10px;
+            }
+        }
+
+        @include respond-from(lg) {
+            &__slider___ {
+                &.u-fix-height {
+                    max-height: 202px;
+                }
+            }
+        }
+    }
+}
+
+/*!------------------------------------------------------------------------------
+
+        c-gallery-S-1
+
+------------------------------------------------------------------------------*/

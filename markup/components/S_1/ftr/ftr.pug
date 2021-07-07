@@ -1,0 +1,53 @@
+mixin ftr(props={})
+
+    | <!-- ********** c-ftr-S-1 ********** -->
+
+    .c-ftr-S-1&attributes(attributes)
+        footer.__cl-c-ftr___
+            .__cl-w-center___
+                .__cl-c-ftr__wrapp___ 
+                    .__cl-grid___.__cl-grid--md___
+                        .__cl-grid__c-12___.__cl-grid__c-xxs-6___.__cl-grid__c-xmd-3___
+                            a(href="#" aria-label="logo").__cl-c-ftr__logo-box___
+                                img(src="static/img/general/logo.png" alt="").__cl-c-ftr__logo___.lazyload
+                            ul.__cl-c-ftr__menu___
+                                li.__cl-c-ftr__menu-el___
+                                    a(href="#").__cl-c-ftr__menu-link___ Worldwide furniture store since 2020. We sell over 1000+ branded products on our website
+                                li.__cl-c-ftr__menu-el___
+                                    a(href="#").__cl-c-ftr__menu-link___.__cl-c-ftr__menu-link--local___ Sawojajar Malang,  Hawaii
+                                li.__cl-c-ftr__menu-el___
+                                    a(href="tel:+6289 456 3455").__cl-c-ftr__menu-link___.__cl-c-ftr__menu-link--phone___ +6289 456 3455
+                                li.__cl-c-ftr__menu-el___
+                                    a(href="mailto:www.lorem.com").__cl-c-ftr__menu-link___ www.lorem.com
+                            
+                        .__cl-grid__c-12___.__cl-grid__c-xxs-6___.__cl-grid__c-xmd-2___
+                            .__cl-c-ftr__title___ Menu
+                            - const menu = ['Products', 'Rooms', 'Inspirations', 'About Us', 'Terms & Policy']
+                            ul.__cl-c-ftr__menu___
+                                each val in menu
+                                    li.__cl-c-ftr__menu-el___
+                                        a(href="#").__cl-c-ftr__menu-link___= val
+                                
+                        .__cl-grid__c-12___.__cl-grid__c-xxs-6___.__cl-grid__c-xmd-2___
+                            .__cl-c-ftr__title___ Account
+                            - const account = ['My Account', 'Checkout', 'My Cart', 'My catalog']
+                            ul.__cl-c-ftr__menu___
+                                each val in account
+                                    li.__cl-c-ftr__menu-el___
+                                        a(href="#").__cl-c-ftr__menu-link___= val
+
+                        .__cl-grid__c-12___.__cl-grid__c-xxs-6___.__cl-grid__c-xmd-2___
+                            .__cl-c-ftr__title___ Stay Connected
+                            - const connected = ['Facebook', 'Instagram', 'Twitter']
+                            ul.__cl-c-ftr__menu___
+                                each val in connected
+                                    li.__cl-c-ftr__menu-el___
+                                        a(href="#").__cl-c-ftr__menu-link___= val
+                                   
+                        .__cl-grid__c-12___.__cl-grid__c-xxs-6___.__cl-grid__c-xmd-3___
+                            .__cl-c-ftr__title___ Stay Updated
+                            +form({
+                                type: 'comment'
+                            })
+
+    | <!-- ********** c-ftr-S-1 ********** -->

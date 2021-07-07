@@ -1,0 +1,46 @@
+mixin slider_box(props={})
+
+    |<!-- ********** c-slider-box-S-1 ********** -->
+
+    .c-slider-box-S-1&attributes(attributes)
+        .__cl-c-slider-box___
+            -
+                const data = [{
+                    img: 1,
+                    text: 'How to create a living room to love',
+                    data: '20 jan 2020'
+                }, {
+                    img: 2,
+                    text: 'Solution for clean look working space',
+                    data: '20 jan 2020'
+                }, {
+                    img: 3,
+                    text: 'Make your cooking activity more fun with good setup',
+                    data: '20 jan 2020',
+                }, {
+                    img: 1,
+                    text: 'How to create a living room to love',
+                    data: '20 jan 2020'
+                }]
+
+            .__cl-c-slider-box__slider___.__cl-c-slider___.js-news-preview-slider.u-fix-height
+                each val in data
+                    .__cl-c-slider-box__slide___
+                        +slide({
+                            img: val.img,
+                            text: val.text,
+                            data: val.data,
+                        })
+                    
+    |<!-- ********** c-slider-box-S-1 ********** -->
+
+mixin slide(props={})
+    .__cl-c-slide__hov-box___
+        .__cl-c-slide___(tabindex="0")
+            .__cl-c-slide__wrapper___
+                a(href="#" aria-label="slide picture").__cl-c-slide__img-box___
+                    img(class="lazyload" src="static/img/general/cork-slot.png" data-src=`static/img/content/slide-${props.img}.jpg` alt="")
+
+                .__cl-c-slide__category___
+                    .__cl-c-slide__category-name___= props.text
+                    .__cl-c-slide__category-data___= props.data

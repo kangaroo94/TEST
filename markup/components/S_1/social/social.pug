@@ -1,0 +1,16 @@
+mixin social(props={})
+
+    |<!-- ********** c-social-S-1 ********** -->
+
+    .c-social-S-1&attributes(attributes)
+
+        ul.__cl-c-social___(class=props.mod ? `__cl-c-social--${props.mod}___`: ``)
+            li.__cl-c-social__item___
+                a(href="#" aria-label="heart button").__cl-c-social__btn___.__cl-c-social__btn--fb___
+            li.__cl-c-social__item___
+                a(href="#" aria-label="cart button").__cl-c-social__btn___.__cl-c-social__btn--tw___
+            li.__cl-c-social__item___
+                a(href="#" aria-label="profile").__cl-c-social__profile-box___
+                    img(src="static/img/general/profile.png" alt="").__cl-c-social__profile___.lazyload
+
+    |<!-- ********** c-social-S-1 ********** -->

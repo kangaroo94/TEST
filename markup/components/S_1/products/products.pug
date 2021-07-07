@@ -1,0 +1,86 @@
+mixin products(props = {})
+    | <!-- ********** c-products-S-1 ********** -->
+
+    .c-products-S-1&attributes(attributes)
+        .__cl-c-products___
+            -
+                const data = [{
+                    img: 1,
+                    title: 'Syltherine',
+                    text: 'Stylish cafe chair',
+                    price: 'Rp 2.500.000',
+                    label: 'Rp 3.500.000',
+                }, {
+                    img: 2,
+                    title: 'Syltherine',
+                    text: 'Luxury big sofa',
+                    price: 'Rp 2.500.000'
+                }, {
+                    img: 3,
+                    title: 'Lolito',
+                    text: 'Luxury big sofa',
+                    price: 'Rp 7.000.000',
+                    label: 'Rp 14.000.000'
+                }, {
+                    img: 4,
+                    title: 'Respira',
+                    text: 'Minimalist fan',
+                    price: 'Rp 500.000'
+                }, {
+                    img: 5,
+                    title: 'Grifo',
+                    text: 'Night lamp',
+                    price: 'Rp 1.500.000'
+                }, {
+                    img: 6,
+                    title: 'Muggo',
+                    text: 'Small mug',
+                    price: 'Rp 150.000'
+                }, {
+                    img: 7,
+                    title: 'Pingky',
+                    text: 'Cute bed set',
+                    price: 'Rp 7.000.000',
+                    label: 'Rp 14.000.000'
+                }, {
+                    img: 8,
+                    title: 'Potty',
+                    text: 'Minimalist flower pot',
+                    price: 'Rp 500.000'
+                }]
+
+            #cardDiv.__cl-grid___.__cl-grid--slots___
+                each val in data
+                    .__cl-grid__c-12___.__cl-grid__c-to-x-6___.__cl-grid__c-sm-4___.__cl-grid__c-md-4___.__cl-grid__c-xmd-3___
+                        +slot({
+                            img: val.img,
+                            title: val.title,
+                            text: val.text,
+                            price: val.price,
+                            label: val.label
+                        })
+            .__cl-c-products__btn-box___
+                button#btn.__cl-c-btn___.__cl-c-products__btn___ Show More     
+    | <!-- ********** c-products-S-1 ********** -->
+
+mixin slot(props = {})
+    .__cl-c-slot___(tabindex="0" class=props.mod ? `__cl-c-slot--${props.mod}___`: ``)
+        a(href="#" aria-label="slot picture").__cl-c-slot__img-box___
+            img(class="lazyload" src="static/img/general/cork-slot.png" data-src=`static/img/content/slot-${props.img}.jpg` alt="")
+        .__cl-c-slot__content___
+            .__cl-c-slot__title___= props.title
+            .__cl-c-slot__text___= props.text
+            .__cl-c-slot__value___
+                .__cl-c-slot__price___= props.price 
+                .__cl-c-slot__label___= props.label
+                
+        .__cl-c-slot__hov-box___
+            .__cl-c-slot__btn-box___
+                a(href="#").__cl-c-btn___.__cl-c-slot__btn-play___.js-btn-listener Add to cart
+            .__cl-c-slot__in___
+                .__cl-c-slot__text-box___
+                    .__cl-c-slot__line___    
+                        a(href="#" aria-label="").__cl-c-slot__item___.__cl-c-slot__icon-share___ 
+                            span.__cl-c-slot__key___ Share
+                        a(href="#" aria-label="").__cl-c-slot__item___.__cl-c-slot__icon-like___ 
+                            span.__cl-c-slot__key___ Like

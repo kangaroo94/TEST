@@ -1,0 +1,24 @@
+include ../components/common/head
+include ../components/common/include-js
+include ../components/common/img-svg 
+
+include ../components/%=component_hdr=%/hdr/hdr
+include ../components/%=component_ftr=%/ftr/ftr
+include ../components/%=component_social=%/social/social
+include ../components/%=component_banner=%/banner/banner
+include ../components/%=component_services=%/services/services
+include ../components/%=component_form=%/form/form
+include ../components/%=component_gallery=%/gallery/gallery
+include ../components/%=component_products=%/products/products
+include ../components/%=component_slider_box=%/slider_box/slider_box
+
+doctype html
+html(class="no-js" lang="ru")
+    head
+        +head
+    body
+        .__cl-w-outer___
+            block content
+ 
+        +include-js
+        block scripts

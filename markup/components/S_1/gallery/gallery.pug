@@ -1,0 +1,24 @@
+mixin gallery(props = {})
+    | <!-- ********** c-gallery-S-1 ********** -->
+    
+    .c-gallery-S-1&attributes(attributes)
+        .__cl-c-gallery___(class=props.mod ? `c-gallery--${props.mod}`: ``)&attributes(attributes)
+            .__cl-c-gallery__container___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-1.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-2.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___.__cl-c-gallery__img-big___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-3.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___.__cl-c-gallery__img-vertical___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-4.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___.__cl-c-gallery__img-vertical___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-5.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___.__cl-c-gallery__img-vertical___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-6.jpg` alt="").__cl-c-gallery__img___
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___.__cl-c-gallery__img-horizontal___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-7.jpg` alt="")
+                a(href="#" aria-label="gallery image").__cl-c-gallery__img-box___
+                    img(class="lazyload" src="static/img/general/cork-gallery-preview.png" data-src=`static/img/content/gallery-8.jpg` alt="").__cl-c-gallery__img___            
+
+    | <!-- ********** c-gallery-S-1 ********** -->

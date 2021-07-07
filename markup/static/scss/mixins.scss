@@ -1,0 +1,260 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin cf {
+    &:after {
+        content: "";
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+}
+
+@mixin noselect {
+    -webkit-tap-highlight-color: transparent
+}
+
+@mixin autocomplete {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        @content;
+    }
+}
+
+@mixin support($name, $value) {
+    @supports ($name: $value) {
+        @content;
+    }
+}
+
+
+%img-link {
+    display: inline-block;
+    font-size: 0;
+
+    img {
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+%img-responsive {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+%bttn-reset {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+%ul-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%svg-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+%hidden-elem {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: none;
+}
+
+
+@function url-friendly-color($color) {
+    @return '%23'+str-slice('#{$color}', 2, -1);
+}
+
+@mixin respond-from($point) {
+    @if $point == xxs {
+        @media only screen and (min-width: $first-point) {
+            @content;
+        }
+    } @else if $point == to-xxs {
+        @media only screen and (max-width: $first-point - 1px) {
+            @content;
+        }
+    }  @else if $point == xxs-lg {
+        @media only screen and (min-width: $first-point) and (max-width: $fifth-point - 1px) {
+            @content;
+        }
+    } @else if $point == xxs-xs {
+        @media only screen and (min-width: $first-point) and (max-width: $second-point - 1px) {
+            @content;
+        }
+    } @else if $point == to-xs {
+        @media only screen and (max-width: $second-point - 1px) {
+            @content;
+        }
+    } @else if $point == to-x {
+        @media only screen and (min-width: $zero-point - 1px) {
+            @content;
+        }
+    } @else if $point == xs {
+        @media only screen and (min-width: $second-point) {
+            @content;
+        }
+    } @else if $point == xxs-sm {
+        @media only screen and (min-width: $first-point) and (max-width: $third-point - 1px) {
+            @content;
+        }
+    }  @else if $point == xxs-md {
+        @media only screen and (min-width: $first-point) and (max-width: $fourth-point - 1px) {
+            @content;
+        }
+    } @else if $point == xs-sm {
+        @media only screen and (min-width: $second-point) and (max-width: $third-point - 1px) {
+            @content;
+        }
+    } @else if $point == xs-md {
+        @media only screen and (min-width: $second-point) and (max-width: $fourth-point - 1px) {
+            @content;
+        }
+    } @else if $point == sm {
+        @media only screen and (min-width: $third-point) {
+            @content;
+        }
+    } @else if $point == to-sm {
+        @media only screen and (max-width: $third-point - 1px) {
+            @content;
+        }
+    } @else if $point == md {
+        @media only screen and (min-width: $fourth-point) {
+            @content;
+        }
+    } @else if $point == md-mediate {
+        @media only screen and (min-width: $fourth-point-mediate) {
+            @content;
+        }
+    } @else if $point == to-md {
+        @media only screen and (max-width: $fourth-point - 1px) {
+            @content;
+        }
+    } @else if $point == to-md-mediate {
+        @media only screen and (max-width: $fourth-point-mediate - 1px) {
+            @content;
+        }
+    } @else if $point == sm-md {
+        @media only screen and (min-width: $third-point) and (max-width: $fourth-point - 1px) {
+            @content;
+        }
+    } @else if $point == sm-lg {
+        @media only screen and (min-width: $third-point) and (max-width: $page-width - 1px) {
+            @content;
+        }
+    } @else if $point == sm-xmd {
+        @media only screen and (min-width: $third-point) and (max-width: $fifth-point - 1px) {
+            @content;
+        }
+    } @else if $point == xs-md {
+        @media only screen and (min-width: $second-point) and (max-width: $fourth-point - 1px) {
+            @content;
+        }
+    } @else if $point == md-lg {
+        @media only screen and (min-width: $fourth-point) and (max-width: $page-width - 1px) {
+            @content;
+        }
+    } @else if $point == xmd {
+        @media only screen and (min-width: $fifth-point) {
+            @content;
+        }
+    } @else if $point == xxmd {
+        @media only screen and (min-width: $sixth-point) {
+            @content;
+        }
+    } @else if $point == lg {
+        @media only screen and (min-width: $page-width) {
+            @content;
+        }
+    } @else if $point == to-lg {
+        @media only screen and (max-width: $page-width - 1px) {
+            @content;
+        }
+    }  @else if $point == to-xmd {
+        @media only screen and (max-width: $fifth-point - 1px) {
+            @content;
+        }
+    } @else if $point == to-xxmd {
+        @media only screen and (max-width: $sixth-point - 1px) {
+            @content;
+        }
+    } @else if $point == to-xlg {
+        @media only screen and (max-width: $page-width + 250px - 1px) {
+            @content;
+        }
+    } @else if $point == lg {
+        @media only screen and (min-width: $page-width ) {
+            @content;
+        }
+    } @else if $point == xlg {
+        @media only screen and (min-width: $page-width  + 250px) {
+            @content;
+        }
+    } @else if $point == md-xmd {
+        @media only screen and (min-width: $fourth-point) and (max-width: $fifth-point - 1px) {
+            @content;
+        }
+    } @else if $point == landscape {
+        @media only screen and (orientation: landscape) and (max-width: 900px) {
+            @content;
+        }
+    }
+}
+
+@mixin width($value) {
+    width: $value;
+    max-width: $value;
+    min-width: $value;
+}
+
+@mixin focus-within {
+    &:hover {
+        @content;
+    }
+
+    &:focus-within {
+        @content;
+    }
+}
+
+@mixin styles-for-ie {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}

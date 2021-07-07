@@ -1,0 +1,25 @@
+extends _page-template
+
+block content
+    | <!-- skin 1 -->
+    
+    .__cl-w-inner___
+        +hdr
+        +banner
+        .__cl-w-page-section___
+            .__cl-w-center___
+                main
+                    +services
+                    section.__cl-u-clearfix___
+                        h2(id="contents-el-0").__cl-c-h2___ Our Products
+                        +products
+
+                    section.__cl-u-clearfix___
+                        h2(id="contents-el-0").__cl-c-h2___ Tips & Tricks
+                        +slider_box
+
+                    section.__cl-u-clearfix___.__cl-u-clearfix--xs___
+                        a(href="#" aria-label="Share").__cl-c-link___ Share your setup with
+                        a(href="#" aria-label="Share").__cl-c-link___.__cl-c-link--md___ #LoremFurniture
+                        +gallery(class="__cl-w-gap-sm___")
+    +ftr

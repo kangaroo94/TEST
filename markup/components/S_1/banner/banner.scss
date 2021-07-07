@@ -1,0 +1,137 @@
+/*!------------------------------------------------------------------------------
+
+        c-banner-S-1
+
+------------------------------------------------------------------------------*/
+
+.c-banner-S-1 {
+    .__cl-c-banner {
+        &___ {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 450px;
+            z-index: 1;
+            color: $banner-text;
+            text-align: center;
+        }
+
+        &__bg___ {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+
+            img {
+                display: inline-block;
+                min-width: 100%;
+                min-height: 100%;
+
+                @include support(object-fit, cover) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 47% 50%;
+                }
+            }
+        }
+
+        &__title___ {
+            max-width: 374px;
+        }
+
+        &__text___ {
+            max-width: 357px;
+            margin-top: 3px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.3;
+            color: $banner-text;
+        }
+
+        &__content___ {
+            max-width: 394px;
+            padding: 20px;
+            background: $banner-fill;
+            text-align: left;
+            backdrop-filter: blur(15px);
+        }
+
+        &__btn-box___  {
+            width: 100%;
+            height: 50px;
+            max-width: 250px;
+        }
+
+        &__btn___ {
+            width: 100%;
+            height: 50px;
+            padding: 24px 0;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        @include respond-from(xxs) {
+            &__text___ {
+                margin: 16px 0 20px;
+                font-size: 18px;
+            }
+        }
+
+        @include respond-from(sm) {
+            &___ {
+                min-height: 650px;
+            }
+
+            &__content___ {
+                padding: 40px;
+            }
+
+            &__text___ {
+                font-size: 20px;
+            }
+        }
+
+        @include respond-from(md) {
+            &___ {
+                min-height: 796px;
+            }
+
+            &__content___ {
+                max-width: 494px;
+                padding: 60px;
+            }
+
+            &__text___ {
+                margin: 16px 0 30px;
+            }
+
+            &__btn-box___  {
+                height: 78px;
+                max-width: 374px;
+            }
+
+            &__btn___ {
+                height: 78px;
+                font-size: 20px;
+            }
+        }
+
+        @include respond-from(xmd) {
+            &__text___ {
+                margin: 16px 0 48px;
+            }
+        }
+    }
+}
+
+/*!------------------------------------------------------------------------------
+
+        c-banner-S-1
+
+------------------------------------------------------------------------------*/

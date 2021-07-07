@@ -1,0 +1,43 @@
+mixin hdr(props={})
+
+    |<!-- ********** c-hdr-S-1 ********** -->
+
+    .c-hdr-S-1&attributes(attributes)
+        header.__cl-c-hdr___(class=props.mod ? `__cl-c-hdr--${props.mod}___`: ``).__cl-c-hdr-fix___.__cl-c-hdr-fix-scroll___.js-header
+            .__cl-w-center___.__cl-c-hdr__center___
+                a(href="#" aria-label="logo").__cl-c-hdr__logo-box___
+                    img(src="static/img/general/logo.png" alt="").__cl-c-hdr__logo___.lazyload
+                
+                .__cl-c-hdr__box___
+                    button.__cl-c-hdr__hamburger-btn___.js-modal-btn(type="button" data-toggle="modal" data-target="#modal-hdr" aria-label="Open hdr")
+                    
+                    section#modal-hdr.modal.fade.__cl-c-hdr__modal___.js-modal-main(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+                        .__cl-c-hdr__dialog___.modal-dialog(role="document")
+                            .__cl-c-hdr__list___.js-menu-list
+                                - const menu = ['Products', 'Rooms', 'Inspirations']
+                                - const submenu = ['Deposit Bonus Casino', 'Casino bonuses', 'Free spins', 'Find the best casino deposit bonus', 'Jackpot games', 'Casino bonus of the month', 'Find the best casino deposit bonus']
+                                    
+                                each val, index in menu
+                                    if index === 0 || index === 1
+                                        .__cl-c-hdr__item___
+                                            .__cl-c-hdr__item-in___
+                                                a(href="#").__cl-c-hdr__link___.js-menu-link.js-header-drop-btn= val
+                                                button(type="button" data-toggle="collapse" aria-expanded="false" role="button" data-target=`#submenu-${index}` aria-controls=`submenu-${index}`).__cl-c-hdr__btn-collapse___.collapsed.js-menu-btn-collapse
+                                            
+                                            .__cl-c-hdr__submenu-drop___.show.collapse(id=`submenu-${index}` aria-labelledby=`#submenu-${index}` aria-expanded="false")
+                                                ul.__cl-c-hdr__submenu___
+                                                    each el in submenu
+                                                        li.__cl-c-hdr__submenu-el___
+                                                            a(href="#").__cl-c-hdr__submenu-link___= el
+                                                        
+                                    else if index === 1
+                                        .__cl-c-hdr__item___
+                                            .__cl-c-hdr__item-in___
+                                                a(href="#").__cl-c-hdr__link___.js-menu-link.js-header-drop-btn.is-active= val
+                                                
+                                    else
+                                        .__cl-c-hdr__item___
+                                            .__cl-c-hdr__item-in___
+                                                a(href="#").__cl-c-hdr__link___.js-menu-link.js-header-drop-btn= val
+                                +social
+    |<!-- ********** c-hdr-S-1 ********** -->

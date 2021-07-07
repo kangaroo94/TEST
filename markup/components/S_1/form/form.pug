@@ -1,0 +1,18 @@
+mixin form(props = {})
+    | <!-- ********** c-form-S-1 ********** -->
+    
+    .c-form-S-1&attributes(attributes)
+        .__cl-c-form___(class=props.mod ? `__cl-c-form--${props.mod}___`: ``)
+            if props.type === 'comment'
+
+            form(action="" id = `${props.type}form` class= props.class ? props.class : ``).__cl-c-form__form___
+                .__cl-c-form__row___
+                    if props.type === 'comment'
+
+                .__cl-c-field-group___
+                    label(for="email" data-error="Please enter your email").__cl-c-form-label___
+                    input(type="email" id="email" name="email" aria-label="email" placeholder="Enter your email").__cl-c-field___
+                .__cl-c-form__btn-box___
+                    button(type="submit" id="submit_button" data-send="Message has been sent").__cl-c-btn___.__cl-c-btn--alt___.__cl-c-btn--lg___.__cl-c-form__btn___ 
+        
+    | <!-- ********** c-form-S-1 ********** -->
